@@ -137,7 +137,7 @@ MU_API(muError_t) muGraytoRGBA(const muImage_t *src, muImage_t *dst);
 /* This routine transform the RGB to XYZ plane. */
 MU_API(muError_t) muRGB2XYZ(const muImage_t *src, muImage_t *dst);
 
-/* This routine transform the RGB to XYZ plane. */
+/* This routine transform the XYZ to LAB plane. */
 MU_API(muError_t) muXYZ2LAB(const muImage_t *src, muImage_t *dst);
 
 /********* Image Segmentation, Connected Components and Contour Retrieval ***************/
@@ -174,12 +174,12 @@ MU_API (muError_t) muDilate33(const muImage_t *src, muImage_t *dst);
 
 
 /* erodes input image (applies minimum filter) one or more times.
-   If element pointer is NULL, 3x3 rectangular element is used */
+   If element pointer is NULL, 5x5 rectangular element is used */
 MU_API (muError_t) muErode55(const muImage_t *src, muImage_t *dst);
 
 
 /* dilates input image (applies maximum filter) one or more times.
-   If element pointer is NULL, 3x3 rectangular element is used */
+   If element pointer is NULL, 5x5 rectangular element is used */
 MU_API (muError_t) muDilate55(const muImage_t *src, muImage_t *dst);
 
 

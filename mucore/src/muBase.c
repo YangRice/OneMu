@@ -327,11 +327,11 @@ muSeqBlock_t * muPushSeq(muSeq_t *seq, MU_VOID* element)
 	{	
 		sbhead = seq->first;
 
-		while(sbhead != NULL)
+		do
 		{
 			sbprev = sbhead;
 			sbhead = sbhead->next;
-		}
+		} while (sbhead != NULL);
 
 		sbcurrent = (muSeqBlock_t *)malloc(sizeof(muSeqBlock_t));
 
